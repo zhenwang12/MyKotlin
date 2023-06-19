@@ -15,7 +15,10 @@ abstract class BaseViewModelFragment<T : ViewDataBinding, VM : ViewModel> : Base
         initViewModel()
         observerData()
         initEvent()
+        startLoadData()
     }
+
+    open fun startLoadData() {}
 
     fun initViewModel() {
         viewModel = ViewModelProvider(this).get(getSubClass())

@@ -29,4 +29,8 @@ class OnSellFragment : BaseViewModelFragment<FragmentOnsellBinding, OnSellViewMo
             }
         }
     }
+
+    override fun startLoadData() {
+        viewModel.loadData()
+    }
 }
